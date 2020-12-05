@@ -1,4 +1,7 @@
 
+
+import 'hard.dart';
+import 'soft.dart';
 import 'dart:math';
 import 'package:flutter/material.dart';
 
@@ -25,8 +28,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
 
-  int left_images=1;
-  int right_images=1;
   @override
   Widget build(BuildContext context) {
 
@@ -38,26 +39,31 @@ class _MyAppState extends State<MyApp> {
           Expanded(
             child: FlatButton(
               onPressed: (){
-                setState(() {
-                  left_images= Random().nextInt(5)+1;
-                });
+                Navigator.of(context)
+                    .push(
 
-                print('Value $left_images');
+                    MaterialPageRoute(builder: (context)=> hard())
+                );
+
+
               },
-              child: Image.asset("images/dice$left_images.png"),
+              child: Image.asset("images/dice1.png"),
             ),
           ),
 
           Expanded(
             child: FlatButton(
               onPressed: (){
-                setState(() {
-                  right_images= Random().nextInt(5)+1;
-                });
-                print('SP17-BCS-038');
+
+                Navigator.of(context)
+                    .push(
+
+                    MaterialPageRoute(builder: (context)=> soft())
+                );
+
               },
-              child: Image.asset(
-                  "images/dice$right_images.png"),
+              child: Image.asset("images/dice2.png"
+              ),
             ),
           ),
         ],
@@ -65,4 +71,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
