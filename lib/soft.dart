@@ -7,7 +7,7 @@ void main() {
       home: Scaffold(
         backgroundColor: Colors.blue,
         appBar: AppBar(
-          title: Text('Easy Game'),
+          title: Text('EasyGame'),
           backgroundColor: Colors.green,
         ),
         body: soft(),
