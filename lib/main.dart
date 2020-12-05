@@ -18,23 +18,30 @@ void main() {
   );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  var images=4;
   @override
   Widget build(BuildContext context) {
-    
-    
-    
+
+
+
     return Center(
       child: Row(
         children: <Widget>[
           Expanded(
-      child: FlatButton(
-        onPressed: (){
-          print('Muhammad Faisal');
-        },
-        child: Image.asset("images/dice2.png"),
-      ),
-      ),
+            child: FlatButton(
+              onPressed: (){
+                print('Muhammad Faisal');
+              },
+              child: Image.asset("images/dice$images.png"),
+            ),
+          ),
 
           Expanded(
             child: FlatButton(
@@ -42,7 +49,7 @@ class MyApp extends StatelessWidget {
                 print('SP17-BCS-038');
               },
               child: Image.asset(
-                "images/dice2.png"),
+                  "images/dice2.png"),
             ),
           ),
         ],
