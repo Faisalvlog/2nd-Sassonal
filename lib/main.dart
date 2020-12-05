@@ -1,44 +1,27 @@
+
+
 import 'package:flutter/material.dart';
-import 'home_page.dart';
-import 'dart:async';
 
 void main() {
-  runApp(
+  return runApp(
     MaterialApp(
-      home: MyApp(),
-    )
+      home: Scaffold(
+        backgroundColor: Colors.green,
+        appBar: AppBar(
+          title: Text('DiceGame'),
+          backgroundColor: Colors.grey,
+        ),
+        body: MyApp(),
+
+      ),
+    ),
   );
 }
 
-class MyApp extends StatefulWidget {
-
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-
-@override
-  void initState(){
-    super.initState();
-    Future.delayed(Duration(seconds: 5),
-            (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),
-              ),
-              );
-    },
-    );
-  }
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text("M Faisal(SP17-BC-038)"),
-
-
-      ),
-    );
+    return Container();
   }
 }
 
