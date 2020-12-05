@@ -21,7 +21,19 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Row(
+      children: <Widget>[
+        Expanded(
+    child: Image.asset(
+        "images/dice2.png"),
+    ),
+
+        Expanded(
+          child: Image.asset(
+            "images/dice2.png"),
+        ),
+      ],
+    );
   }
 }
 
