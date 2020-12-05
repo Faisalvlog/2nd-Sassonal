@@ -1,5 +1,5 @@
 
-
+import 'Contact us.dart';
 import 'hard.dart';
 import 'soft.dart';
 import 'dart:math';
@@ -48,6 +48,21 @@ class _MyAppState extends State<MyApp> {
 
               },
               child: Image.asset("images/dice1.png"),
+            ),
+          ),
+
+          Expanded(
+            child: FlatButton(
+              onPressed: (){
+                Navigator.of(context)
+                    .push(
+
+                    MaterialPageRoute(builder: (context)=> Contact())
+                );
+
+
+              },
+              child: Text("Contact us"),
             ),
           ),
 
