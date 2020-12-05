@@ -21,17 +21,22 @@ class _MyAppState extends State<MyApp> {
 @override
   void initState(){
     super.initState();
-    Future.delayed(Duration(seconds: 3),
+    Future.delayed(Duration(seconds: 5),
             (){
-
-    },);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),
+              ),
+              );
+    },
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("M Faisal"),
+        child: Text("M Faisal(SP17-BC-038)"),
+
+
       ),
     );
   }
