@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
-
+      home: MyApp(),
     )
   );
 }
@@ -16,8 +16,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("M Faisal"),
+    return Scaffold(
+      body: Center(
+        child: Text("M Faisal"),
+      ),
     );
   }
 }
