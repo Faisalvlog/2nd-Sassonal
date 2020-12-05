@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-
 void MyApp(){
   return runApp(
-      MaterialApp(),
-  );
+    MaterialApp(),);
 }
 
-class DicePage extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();
   }
 }
+
