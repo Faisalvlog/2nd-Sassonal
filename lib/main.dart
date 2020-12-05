@@ -1,5 +1,5 @@
 
-
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +25,8 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
 
-  var images=4;
+  int left_images=1;
+  int right_images=1;
   @override
   Widget build(BuildContext context) {
 
@@ -37,19 +38,26 @@ class _MyAppState extends State<MyApp> {
           Expanded(
             child: FlatButton(
               onPressed: (){
-                print('Muhammad Faisal');
+                setState(() {
+                  left_images= Random().nextInt(5)+1;
+                });
+
+                print('Value $left_images');
               },
-              child: Image.asset("images/dice$images.png"),
+              child: Image.asset("images/dice$left_images.png"),
             ),
           ),
 
           Expanded(
             child: FlatButton(
               onPressed: (){
+                setState(() {
+                  left_images= Random().nextInt(5)+1;
+                });
                 print('SP17-BCS-038');
               },
               child: Image.asset(
-                  "images/dice2.png"),
+                  "images/dice$right_images.png"),
             ),
           ),
         ],
