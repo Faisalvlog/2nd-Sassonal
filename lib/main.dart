@@ -52,7 +52,7 @@ class _MyAppState extends State<MyApp> {
             child: FlatButton(
               onPressed: (){
                 setState(() {
-                  left_images= Random().nextInt(5)+1;
+                  right_images= Random().nextInt(5)+1;
                 });
                 print('SP17-BCS-038');
               },
