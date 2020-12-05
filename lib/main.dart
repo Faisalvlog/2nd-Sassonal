@@ -21,18 +21,32 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Expanded(
-    child: Image.asset(
-        "images/dice2.png"),
-    ),
+    
+    
+    
+    return Center(
+      child: Row(
+        children: <Widget>[
+          Expanded(
+      child: FlatButton(
+        onPressed: (){
+          print('Muhammad Faisal');
+        },
+        child: Image.asset("images/dice2.png"),
+      ),
+      ),
 
-        Expanded(
-          child: Image.asset(
-            "images/dice2.png"),
-        ),
-      ],
+          Expanded(
+            child: FlatButton(
+              onPressed: (){
+                print('SP17-BCS-038');
+              },
+              child: Image.asset(
+                "images/dice2.png"),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
